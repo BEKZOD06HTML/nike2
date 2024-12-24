@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <img class="bubbles" src="./img/Bubbles.svg" alt="">
+    <div class="card">
+     
+        <div class="carousel-container">
+            <div class="carousel">
+                <img width="" src="./img/Aire Jordan Nike.svg" alt="Image 1" class="carousel-image">
+                <img width="" src="./img/Aire Jordan Nike.svg" alt="Image 2" class="carousel-image">
+                <img width="" src="./img/Aire Jordan Nike.svg" alt="Image 3" class="carousel-image">
+            </div>
+            <button style="background-color: transparent; position: absolute; top: 200px;" class="next" onclick="moveSlide(1)">
+                <img src="./icon/Active.svg" alt="">
+            </button>
+        </div>
+
+        <img id="menu-icon" style="position: absolute; left: 50%; top: 25px; width: 30px;" src="./icon/Menu.svg" alt="Menu" onclick="toggleMenu()">
+
+        <span class="text_air">
+            <b>AIR</b>
+            <span style="text-shadow: 1px 1px 0 rgba(255, 252, 252, 0.8),
+            -1px -1px 0 rgba(255, 255, 255, 0.8),
+            1px -1px 0 rgba(255, 255, 255, 0.8),
+            -1px 1px 0 rgba(255, 255, 255, 0.8); color: #F3F2F8;">TIGHT</span>
+        </span>
+
+        <h2 class="title">AIR JORDAN</h2>
+
+
+        <img class="bubbles-2" src="./img/Bubbles (2).svg" alt="">
+        <img class="scroll" src="./icon/Scroll To Explore.svg" alt="">
+        <img class="bubbles-3" src="./img/Bubbles (3).svg" alt="">
+        <img class="gallery-image" style="left: 550px; width: 130px; top: 389px;" src="./img/Gallery.svg" alt="">
+        <img class="bubble-icon" style="width: 30px; position: absolute; left: 90%; top: 35%;" src="./icon/Nike Icon (1).svg" alt="">
+
+     
+        <div class="btns">
+            <button class="btn1"><b>EN</b></button>
+            <button class="btn2">AU</button>
+        </div>
+
+ 
+        <img style="width: 100px; opacity: 90%; left: 68%; top: 49%; position: absolute;" src="./img/360.svg" alt="">
+        <b style="position: absolute; top: 48%; left: 10px; font-size: 16px;">03</b>
+        <img style="position: absolute; top: 93%; left: 20px; width: 40px;" src="./icon/Tools.svg" alt="">
+    </div>
+
+    <img class="bubbles-1" src="./img/Bubbles (1).svg" alt="">
+</div>
+
+
+ 
+<div id="menu" class="menu">
+    <div id="close-menu">X</div>
+    <ul>
+        <li><a href="#">Nike Men's Air Max 1</a></li>
+        <li><a href="#">
+            Nike Air Force 1 '07</a></li>
+        <li><a href="#">
+            Nike Court Vision Low</a></li>
+        <li><a href="#">Nike Women's V2K Run</a></li>
+    </ul>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+
+    let slideIndex = 0;
+
+    function moveSlide(step) {
+        const slides = document.querySelectorAll(".carousel-image");
+        slideIndex += step;
+
+        if (slideIndex >= slides.length) {
+            slideIndex = 0; 
+        } else if (slideIndex < 0) {
+            slideIndex = slides.length - 1;
+        }
+
+        document.querySelector(".carousel").style.transform = `translateX(-${slideIndex * 100}%)`;
+    }
+
+
+    function toggleMenu() {
+        const menu = document.getElementById("menu");
+        menu.classList.toggle("show");
+    }
+    
+</script>
+</body>
+</html>

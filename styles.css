@@ -1,0 +1,281 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    width: 900px;
+    height: 600px;
+    background-color: #F3F2F8;
+    margin-top: 50px;
+    position: relative;
+    margin: 50px auto;
+}
+
+
+.card {
+    width: 700px;
+    height: 450px;
+    background-color: #F3F2F8;
+    border-radius: 10px;
+    border: 4px solid #fff;
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1), 0 10px 30px rgba(0, 0, 0, 0.15);
+    font-family: "Arial", sans-serif;
+    position: relative;
+}
+
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; 
+    margin: 20px auto; }
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease; 
+    position: relative;
+    bottom: 70px;
+    left: 100px;
+}
+
+
+.carousel-image {
+    width: 90%;
+    height: auto;
+}
+
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+
+.prev {
+    left: 0;
+    position: relative;
+    bottom: 600px;
+}
+
+
+.next {
+    right: 0;
+}
+
+
+
+
+.text_air {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.bubbles {
+    width: 200px;
+}
+
+.bubbles-1, .bubbles-2, .bubbles-3 {
+    position: absolute;
+    z-index: -1;
+}
+
+
+.title {
+    position: absolute;
+    color: white;
+    bottom: 165px;
+    left: 40px;
+    font-size: 100px;
+    z-index: -1;
+}
+
+.scroll {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 70px;
+    cursor: pointer;
+}
+
+
+.btn1{
+    background-color: transparent;
+    border: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.btn1:hover{
+    cursor: pointer;
+    color:rgb(133, 133, 133);
+    text-shadow: 
+    1px 1px 0 rgba(0, 0, 0, 0.8),
+    -1px -1px rgba(5, 5, 5, 0.8)8,
+    1px -1px 0 rgba(0, 0, 0, 0.8),
+    -1px 1px 0 rgba(0, 0, 0, 0.8); 
+
+}
+.btn2{
+    background-color: transparent;
+    border: none;
+    color: #F3F2F8;
+    position: relative;
+    text-shadow: 
+            1px 1px 0 rgba(97, 96, 96, 0.8),
+            -1px -1px 0 rgba(86, 84, 84, 0.8),
+            1px -1px 0 rgba(87, 87, 87, 0.8),
+            -1px 1px 0 rgba(101, 100, 100, 0.8); 
+            transition: color 0.3s ease-in-out;
+}
+.btn2:hover{
+    cursor: pointer;
+    color: #000000;
+    background-color: none;
+    
+}
+
+.btns{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    left: 90%;
+    top: 20px;
+}
+
+
+.bubbles-1 {
+    position: absolute;
+    left: 500px;
+    width: 300px;
+    bottom: 1px;
+}
+
+.bubbles-2 {
+    position: absolute;
+    bottom: 280px;
+    width: 130px;
+    left: 370px;
+    z-index: -1;
+}
+
+.bubbles-3 {
+    position: absolute;
+    top: 280px;
+    width: 80px;
+    left: 120px;
+}
+
+.gallery-image {
+    position: absolute;
+    left: 550px;
+    width: 130px;
+    top: 389px;
+}
+
+
+.bubble-icon {
+    position: absolute;
+    left: 90%;
+    top: 35%;
+    width: 30px;
+}
+
+.bubble-active {
+    position: absolute;
+    left: 97%;
+    top: 48%;
+    width: 10px;
+}
+
+.bubble-tools {
+    position: absolute;
+    top: 93%;
+    left: 20px;
+    width: 40px;
+}
+.menu {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    width: 300px; 
+    background-color: #333;
+    color: #fff;
+    padding-top: 50px;
+    border-radius: 8px 8px 0 0; 
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    opacity: 70%;
+}
+
+.menu.show {
+    transform: translateX(-50%) translateY(0); 
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #444; 
+}
+
+.menu ul li:last-child {
+    border-bottom: none; 
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.menu ul li a:hover {
+    background-color: #555;
+}
+
+
+#menu-icon {
+    cursor: pointer;
+    z-index: 999;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    background: url('./icon/Menu.svg') no-repeat center center;
+    background-size: contain;
+}
+
+
+#close-menu {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+
